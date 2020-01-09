@@ -11,7 +11,7 @@ function action(type,value,format,meta) {
         switch(value[0]['t']) {
             case 'DisplayMath':
             case 'InlineMath':
-                var latexout = "" + asciimath.AMTparseAMtoTeX(value[1].slice(2));
+                var latexout = "" + asciimath.AMTparseAMtoTeX(value[1]);
                 return Formula(value[0], latexout);
         }
     }
