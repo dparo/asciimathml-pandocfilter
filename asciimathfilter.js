@@ -7,7 +7,7 @@ var asciimath = require('./asciimath-based/ASCIIMathTeXImg.js');
 var Formula = pandoc.Formula; // for Math
 
 function action(type,value,format,meta) {
-    if (type === 'Math' && value.length == 2 && value[1].length >= 2 && value[1].slice(0,2) === ':a') {
+    if (type === 'Math' && value.length == 2) {
         switch(value[0]['t']) {
             case 'DisplayMath':
             case 'InlineMath':
